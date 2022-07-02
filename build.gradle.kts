@@ -25,3 +25,15 @@ tasks.withType<JavaCompile> {
     sourceCompatibility = "1.8"
     targetCompatibility = "1.8"
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "net.minikloon"
+            artifactId = "fsmgasm"
+            version = "1.0"
+
+            from(components["java"])
+        }
+    }
+}
