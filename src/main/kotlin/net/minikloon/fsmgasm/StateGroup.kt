@@ -1,6 +1,4 @@
-package dev.bozho.states.statelibrary
-
-import net.minikloon.fsmgasm.State
+package net.minikloon.fsmgasm
 
 open class StateGroup(states: List<State> = emptyList()) : StateHolder(states) {
     constructor(vararg states: State) : this(states.toList())

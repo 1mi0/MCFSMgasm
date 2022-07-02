@@ -1,6 +1,4 @@
-package dev.bozho.states.statelibrary
-
-import net.minikloon.fsmgasm.State
+package net.minikloon.fsmgasm
 
 abstract class StateProxy(private val series: StateSeries) : State() {
     override fun onStart() {

@@ -1,6 +1,4 @@
-package dev.bozho.states.statelibrary
-
-import net.minikloon.fsmgasm.State
+package net.minikloon.fsmgasm
 
 open class StateSeries(states: List<State> = emptyList()) : StateHolder(states) {
     protected var current = 0

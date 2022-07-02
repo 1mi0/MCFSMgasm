@@ -1,4 +1,4 @@
-package dev.bozho.states.statelibrary
+package net.minikloon.fsmgasm
 
 import net.minikloon.fsmgasm.State
 
