@@ -5,7 +5,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "net.minikloon"
+group = "net.minikloon.fsmgasm"
 version = "1.0"
 
 repositories {
