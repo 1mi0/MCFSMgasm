@@ -1,9 +1,6 @@
 package net.minikloon.fsmgasm
 
-import org.apache.logging.log4j.LogManager
 
-
-internal val logger = LogManager.getLogger()
 // Keep this one above 0. Don't be a dumbass, the code relies on this being above 0
 const val infiniteDurationState: Int = Int.MAX_VALUE
 
@@ -30,8 +27,7 @@ abstract class State {
         try {
             onStart()
         } catch(e: Throwable) {
-            logger.error("Exception during ${e.javaClass.name} start")
-            logger.error(e.stackTrace)
+            e.printStackTrace()
         }
     }
     
@@ -54,8 +50,7 @@ abstract class State {
         try {
             onUpdate()
         } catch(e: Throwable) {
-            logger.error("Exception during ${e.javaClass.name} update")
-            logger.error(e.stackTrace)
+            e.printStackTrace()
         }
         updating = false
     }
@@ -72,8 +67,7 @@ abstract class State {
         try {
             onEnd()
         } catch(e: Throwable) {
-            logger.error("Exception during ${javaClass.name} end")
-            logger.error(e.stackTrace)
+            e.printStackTrace()
         }
     }
 
