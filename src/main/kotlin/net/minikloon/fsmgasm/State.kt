@@ -41,12 +41,12 @@ abstract class State {
             updating = true
         }
 
-        durationPassed++
         if(isReadyToEnd() && !frozen) {
             end()
             return
         }
-        
+        durationPassed++
+
         try {
             onUpdate()
         } catch(e: Throwable) {

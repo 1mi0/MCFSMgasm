@@ -8,8 +8,17 @@ plugins {
 group = "net.minikloon.fsmgasm"
 version = "1.0"
 
+dependencies {
+    testImplementation(kotlin("test"))
+}
+
+
 repositories {
     mavenCentral()
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 tasks.withType<KotlinCompile> {
