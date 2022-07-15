@@ -34,7 +34,7 @@ open class StateSeries(states: List<State> = emptyList()) : StateHolder(states) 
     override fun onUpdate() {
         states[current].update()
         
-        if((states[current].isReadyToEnd() && !states[current].frozen) || skipping) {
+        if((states[current].ended || (states[current].isReadyToEnd() && !states[current].frozen)) || skipping) {
             if(skipping)
                 skipping = false
             
