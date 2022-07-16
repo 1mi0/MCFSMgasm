@@ -45,7 +45,7 @@ abstract class State {
             end()
             return
         }
-        durationPassed++
+        durationPassed--
 
         try {
             onUpdate()
