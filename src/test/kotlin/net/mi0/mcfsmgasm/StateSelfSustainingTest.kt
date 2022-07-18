@@ -11,7 +11,6 @@ class TestLoggedState(private val name: String, override val duration: Int) : St
 }
 
 object StateSelfSustainingTest {
-
     val selfSustaining = object : StateSelfSustaining() {
         var counter = 1
         override fun factory(): State {

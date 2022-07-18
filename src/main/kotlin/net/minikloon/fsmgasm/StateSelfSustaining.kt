@@ -23,9 +23,6 @@ abstract class StateSelfSustaining : State() {
     }
 
     open fun next() {
-        if (this::state.isInitialized) {
-            state.end()
-        }
         state = factory()
         state.start()
     }

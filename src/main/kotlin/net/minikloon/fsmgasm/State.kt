@@ -45,7 +45,7 @@ abstract class State {
             end()
             return
         }
-        durationPassed--
+        durationPassed++
 
         try {
             onUpdate()
@@ -72,7 +72,7 @@ abstract class State {
     }
 
     open fun isReadyToEnd() : Boolean {
-        return ended || (remainingDuration <= 0 && remainingDuration != infiniteDurationState)
+        return ended || (remainingDuration <= 0 && duration != infiniteDurationState)
     }
     
     protected abstract fun onEnd()
